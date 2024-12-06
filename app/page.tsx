@@ -6,7 +6,8 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main className="flex flex-col p-6">
+    <main>
+      <div className='flex flex-col p-6'>
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-600 p-4 md:h-52">
         <AcmeLogo/>
       </div>
@@ -44,6 +45,7 @@ export default function Page() {
             alt="Screenshot of the dashboard project showing mobile version"
           />
         </div>
+      </div>
       </div>
       <div className='p-8'>
         <div className='grid md:grid-cols-4 gap-4'>
