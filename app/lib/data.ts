@@ -8,6 +8,10 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { toast } from 'react-toastify';
+// ...
+
+const notify = (message: String) => toast(message);
 
 export async function fetchRevenue() {
   try {
@@ -51,7 +55,6 @@ export async function fetchLatestInvoices() {
 
 export async function fetchCardData() {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
     // how to initialize multiple queries in parallel with JS.
@@ -82,6 +85,7 @@ export async function fetchCardData() {
     };
   } catch (error) {
     console.error('Database Error:', error);
+    notify('Failed to fetch card data.');
     throw new Error('Failed to fetch card data.');
   }
 }

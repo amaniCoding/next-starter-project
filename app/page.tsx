@@ -8,37 +8,35 @@ export default function Page() {
   return (
     <main>
       <div className='flex flex-col p-6'>
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-600 p-4 md:h-52">
+      <div className="flex h-20 shrink-0 items-end rounded-lg bg-pink-700 p-4 md:h-52">
         <AcmeLogo/>
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-4/5 md:px-20">
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
+            <a href="https://nextjs.org/learn/" className="text-pink-800">
               Next.js Learn Course
             </a>
             , brought to you by Vercel.
           </p>
           <Link
             href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
+            className="flex items-center gap-5 self-start rounded-lg bg-pink-700 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-pink-600 md:text-base"
           >
             <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
         <div className="flex items-center justify-center md:w-4/6">
           <Image
-            src="/66.jpg"
-            width={0}
-            height={0}
-            sizes='100vw'
-            style={{ width: '100%', height: 'auto' }}
+            src="/hero-desktop.png"
+            width={560}
+            height={620}
             className="hidden md:block"
             alt="Screenshots of the dashboard project showing desktop version"
           />
           <Image
-            src="/66.jpg"
+            src="/hero-mobile.png"
             width={560}
             height={620}
             className="block md:hidden"
@@ -47,7 +45,7 @@ export default function Page() {
         </div>
       </div>
       </div>
-      <div className='p-8'>
+      {/* <div className='p-8'>
         <div className='grid md:grid-cols-4 gap-4'>
           <div className='rounded-lg shadow-lg p-1 text-center'>
             <p className='my-2 p-2 text-slate-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ducimus porro provident! </p>
@@ -138,7 +136,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
 
   );
