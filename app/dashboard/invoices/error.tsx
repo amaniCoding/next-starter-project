@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { useEffect } from 'react';
-import { toast, Bounce } from 'react-toastify';
+// import { useEffect } from 'react';
+// import { toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
 

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 import { redirect } from 'next/navigation'
-import { Invoice } from '@/app/lib/definitions'
+
 
 export default function DeleteModal({ deleteInvoice, invoiceId }: { invoiceId: string, deleteInvoice: () => void }) {
   const [open, setOpen] = useState(true)
