@@ -8,6 +8,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
     const id = params.id;
     const invoice = await fetchInvoiceById(id);
     const deleteInvoiceWithId = deleteInvoice.bind(null, id);
+    
 
     if (!invoice) {
         notFound();

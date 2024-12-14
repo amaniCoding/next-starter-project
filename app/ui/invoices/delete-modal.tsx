@@ -1,15 +1,17 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useActionState, useEffect, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 import { redirect } from 'next/navigation'
 
 
+
 export default function DeleteModal({ deleteInvoice, invoiceId }: { invoiceId: string, deleteInvoice: () => void }) {
+  const [, formAction, pending] = useActionState(deleteInvoice, null);
   const [open, setOpen] = useState(true)
   const cancelDeleteModal = () => {
-    setOpen(false)
+    setOpen(false);
     redirect('/dashboard/invoices');
   }
   useEffect(() => {
@@ -50,12 +52,14 @@ export default function DeleteModal({ deleteInvoice, invoiceId }: { invoiceId: s
               </div>
             </div>
             <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-              <form action={deleteInvoice}>
+              <form action={formAction}>
                 <button
                   type="submit"
                   className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
                 >
-                  Continue
+                   {
+                      pending ? "Deleting invoice" : "Continue"
+                    }
                 </button>
               </form>
               <button
