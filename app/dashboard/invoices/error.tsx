@@ -14,7 +14,7 @@ export default function Error({
 }) {
   const toastId = React.useRef(null);
 
-  useEffect(() => {
+/*   useEffect(() => {
     // Optionally log the error to an error reporting service
     if(!toast.isActive(toastId.current)) {
       toastId.current = toast.error(`${error}`, {
@@ -30,7 +30,7 @@ export default function Error({
         });
     }
   }, [error]);
-
+ */
   return (
     <main className="flex h-full flex-col items-center justify-center">
       <h2 className="text-center">Something went wrong!</h2>
