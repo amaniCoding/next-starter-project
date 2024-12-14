@@ -6,13 +6,12 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 export default function Error({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const toastId = React.useRef(null);
+  // const toastId = React.useRef(null);
 
 /*   useEffect(() => {
     // Optionally log the error to an error reporting service
