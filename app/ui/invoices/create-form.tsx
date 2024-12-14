@@ -147,7 +147,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         >
           Cancel
         </Link>
-        <Button type="submit" className="bg-pink-700 hover:bg-pink-600" disabled={pending}>{pending ? "Creating":"Create Invoice"}</Button>
+        <Button type="submit" className="bg-pink-700 hover:bg-pink-600" disabled={pending}>{pending ? " Creating ":" Create Invoice "}</Button>
       </div>
     </form>
   );
